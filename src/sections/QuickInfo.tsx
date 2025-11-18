@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone } from 'lucide-react'
+import { MapPin, Clock, Phone, Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const QuickInfo = () => {
@@ -20,14 +20,24 @@ const QuickInfo = () => {
               +971 4 445 2811
             </a>
           </div>
-          <motion.a
-            href="tel:+97144452811"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-saffron transition-colors text-xs sm:text-sm"
-          >
-            Call to Reserve
-          </motion.a>
+          <div className="flex items-center gap-3">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="hidden sm:flex items-center gap-2 bg-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-semibold"
+            >
+              <Sparkles size={14} />
+              <span>Shisha Coming Soon</span>
+            </motion.div>
+            <motion.a
+              href="tel:+97144452811"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-saffron transition-colors text-xs sm:text-sm"
+            >
+              Call to Reserve
+            </motion.a>
+          </div>
         </div>
       </div>
     </section>

@@ -13,6 +13,7 @@ export interface MenuCategory {
   id: string
   name: string
   items: MenuItem[]
+  comingSoon?: boolean
 }
 
 export const menuCategories: MenuCategory[] = [
@@ -294,6 +295,12 @@ export const menuCategories: MenuCategory[] = [
         image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
       },
     ],
+  },
+  {
+    id: 'shisha',
+    name: 'Shisha',
+    items: [],
+    comingSoon: true,
   },
 ]
 
