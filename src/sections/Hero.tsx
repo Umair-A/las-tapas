@@ -50,13 +50,13 @@ const Hero = () => {
           >
             <Link
               to="/menu"
-              className="bg-terracotta text-cream px-8 py-4 rounded-full font-semibold hover:bg-terracotta/90 transition-all shadow-xl hover:scale-105 text-lg"
+              className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-charcoal transition-all shadow-xl hover:scale-105 text-lg"
             >
               View Menu
             </Link>
             <Link
               to="/reservations"
-              className="bg-gold text-charcoal px-8 py-4 rounded-full font-semibold hover:bg-saffron transition-all shadow-xl hover:scale-105 text-lg"
+              className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-charcoal transition-all shadow-xl hover:scale-105 text-lg"
             >
               Reserve Table
             </Link>

@@ -37,7 +37,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
         isScrolled
           ? 'bg-cream/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
@@ -63,24 +63,18 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors relative ${
+                className={`text-sm font-medium transition-colors relative pb-1 ${
                   isActive(link.path)
-                    ? 'text-terracotta'
+                    ? 'text-terracotta border-b-2 border-terracotta'
                     : 'text-charcoal hover:text-terracotta'
                 }`}
               >
                 {link.label}
-                {isActive(link.path) && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-terracotta rounded-full"
-                  />
-                )}
               </Link>
             ))}
             <Link
               to="/reservations"
-              className="bg-gold text-charcoal px-6 py-2 rounded-full font-semibold hover:bg-saffron transition-all shadow-lg hover:scale-105"
+              className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:bg-charcoal transition-all shadow-lg hover:scale-105"
             >
               Reservations
             </Link>
@@ -112,10 +106,10 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left py-2 font-medium transition-colors ${
+                  className={`block w-full text-left py-2 font-medium transition-colors border-l-4 pl-4 ${
                     isActive(link.path)
-                      ? 'text-terracotta font-semibold'
-                      : 'text-charcoal hover:text-terracotta'
+                      ? 'text-terracotta font-semibold border-terracotta'
+                      : 'text-charcoal hover:text-terracotta border-transparent'
                   }`}
                 >
                   {link.label}
@@ -124,7 +118,7 @@ const Navbar = () => {
               <Link
                 to="/reservations"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full bg-gold text-charcoal px-6 py-3 rounded-full font-semibold hover:bg-saffron transition-colors text-center block"
+                className="w-full bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-charcoal transition-colors text-center block"
               >
                 Reservations
               </Link>

@@ -142,7 +142,7 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/reservations"
-              className="bg-gold text-charcoal px-8 py-4 rounded-full font-semibold hover:bg-saffron transition-all shadow-xl hover:scale-105 inline-block"
+              className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-charcoal transition-all shadow-xl hover:scale-105 inline-block"
             >
               Make a Reservation
             </Link>
